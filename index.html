@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्रीमत शिक्षण व ग्रामीण विकास संस्था - पदभरती जाहिरात</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .sparkle {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .main-title {
+            font-size: 2.5rem;
+            color: #6b46c1;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .org-name {
+            font-size: 1.4rem;
+            color: #7c3aed;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .website {
+            font-size: 1.1rem;
+            color: #059669;
+            font-weight: 600;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            color: #6b46c1;
+            margin-bottom: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card-icon {
+            font-size: 1.8rem;
+        }
+        
+        .job-details, .requirements, .compensation, .application {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a78bfa 0%, #c084fc 100%);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 18px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(245, 158, 11, 0.4);
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        }
+        
+        .footer {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-motto {
+            font-size: 1.2rem;
+            color: #6b46c1;
+            font-weight: 600;
+            font-style: italic;
+        }
+        
+        .contact-info {
+            background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #8b5cf6;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .application-form {
+            margin: 40px 0;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #374151;
+            font-size: 1rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #8b5cf6;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin: 0;
+        }
+        
+        .form-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .success-message {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .btn {
+                width: 280px;
+                justify-content: center;
+            }
+            
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .org-name {
+                font-size: 1.2rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .form-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjU4IiBmaWxsPSIjOGI1Y2Y2IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iNCIvPgo8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NSIgZmlsbD0iI2ZmZmZmZiIvPgo8cGF0aCBkPSJNNDAgODVoNDBsLTIwIC0zNXoiIGZpbGw9IiM4YjVjZjYiLz4KPHN2ZyB4PSI0NSIgeT0iMzAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+CjxwYXRoIGQ9Ik0xNSAyNUw3IDE1TDIzIDE1WiIgZmlsbD0iI2Y1OWUwYiIvPgo8L3N2Zz4KPHN2ZyB4PSIzNSIgeT0iNDAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI0MCI+CjxyZWN0IHg9IjAiIHk9IjMwIiB3aWR0aD0iNTAiIGhlaWdodD0iMTAiIGZpbGw9IiM2YjQ2YzEiLz4KPHN2ZyB4PSIxMCIgeT0iMTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIyNSI+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIyNSIgZmlsbD0iIzEwYjk4MSIvPgo8L3N2Zz4KPC9zdmc+Cjwvc3ZnPgo=" alt="Shrimat Logo" class="logo">
+            <div class="sparkle">✨</div>
+            <h1 class="main-title">पदभरती जाहिरात</h1>
+            <p class="org-name">श्रीमत शिक्षण व ग्रामीण विकास संस्था, छत्रपती संभाजीनगर</p>
+            <p class="website">🌐 www.shrimat.org.in</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-card">
+                <h2 class="card-title">
+                    <span class="card-icon">📢</span>
+                    पदाचे स्वरूप
+                </h2>
+                <div class="job-details">
+                    <p><strong>पदाचे नाव:</strong> <span class="highlight">Co-Ordinator</span> (जिल्हा व तालुका स्तरावर)</p>
+                    <br>
+                    <p><strong>🎯 कामाचे स्वरूप:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>शाळांमध्ये जाऊन विद्यार्थ्यांना व पालकांना शिष्यवृत्ती परीक्षेसंदर्भात समुपदेशन करणे</li>
+                        <li>विद्यार्थ्यांना परीक्षेची माहिती व नोंदणी प्रक्रियेबाबत मार्गदर्शन करणे</li>
+                        <li>शाळा व्यवस्थापन, शिक्षक व पालक यांच्याशी संपर्क व समन्वय साधणे</li>
+                        <li>परीक्षा यशस्वी रित्या पार पाडण्यासाठी संस्थेला प्रशासकीय व तांत्रिक सहकार्य करणे</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="card-title">
+                    <span class="card-icon">🎯</span>
+                    पात्रता
+                </h2>
+                <div class="requirements">
+                    <p><strong>🎓 शैक्षणिक पात्रता:</strong> <span class="highlight">पदवीधर</span> (कोणत्याही शाखेत)</p>
+                    <br>
+                    <p><strong>आवश्यक गुणधर्म:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>उत्तम संवादकौशल्य</li>
+                        <li>शैक्षणिक क्षेत्रातील अनुभव असणाऱ्यांना प्राधान्य</li>
+                        <li>स्थानिक परिसराची माहिती असणे आवश्यक</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="card-title">
+                    <span class="card-icon">💼</span>
+                    मानधन व सुविधा
+                </h2>
+                <div class="compensation">
+                    <p>✅ कामानुसार मानधन + प्रोत्साहनपर मोबदला</p>
+                    <p>✅ जिल्हा व तालुका स्तरावर काम करण्याची संधी</p>
+                    <p>✅ राज्यस्तरीय शिष्यवृत्ती परीक्षेचा प्रचार व प्रसार</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="card-title">
+                    <span class="card-icon">📝</span>
+                    संपर्क माहिती
+                </h2>
+                <div class="application">
+                    <div class="contact-info">
+                        <p><strong>📩 ई-मेल:</strong> shrimat.org@gmail.com</p>
+                        <p><strong>📞 संपर्क:</strong> 8432040513,9175124112</p>
+                        <p><strong>🌐 वेबसाईट:</strong> www.shrimat.org.in</p>
+                    </div>
+                    <p><strong>अर्ज प्रक्रिया:</strong> इच्छुक उमेदवारांनी आपला बायोडाटा व आवश्यक कागदपत्रांच्या प्रती वरील नंबर किंवा ईमेल वर पाठवाव्यात</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Form -->
+        <div class="application-form" id="applicationForm" style="display: none;">
+            <div class="content-card" style="max-width: 800px; margin: 0 auto;">
+                <h2 class="card-title">
+                    <span class="card-icon">📝</span>
+                    अर्ज फॉर्म - Co-Ordinator पद
+                </h2>
+                <form id="jobApplicationForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">संपूर्ण नाव *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">ई-मेल *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mobile">मोबाइल नंबर *</label>
+                            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age">वय</label>
+                            <input type="number" id="age" name="age" min="18" max="65">
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="address">पत्ता *</label>
+                            <textarea id="address" name="address" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="education">शैक्षणिक पात्रता *</label>
+                            <select id="education" name="education" required>
+                                <option value="">निवडा</option>
+                                <option value="graduate">(Graduate</option>
+                                <option value="postgraduate">Post Graduate</option>
+                                <option value="diploma">Diploma</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="educationField">शिक्षणाचे क्षेत्र</label>
+                            <input type="text" id="educationField" name="educationField" placeholder="उदा: कॉमर्स, आर्ट्स, सायन्स">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience">अनुभव (वर्षांत)</label>
+                            <select id="experience" name="experience">
+                                <option value="">निवडा</option>
+                                <option value="fresher">0 वर्षे</option>
+                                <option value="1-2">1-2 वर्षे</option>
+                                <option value="3-5">3-5 वर्षे</option>
+                                <option value="5+">5+ वर्षे</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="previousWork"> अनुभव असल्यास काम केलेल्या संस्थेच्या नावासह कामाचे विवरण</label>
+                            <input type="text" id="previousWork" name="previousWork" placeholder="उदा: शिक्षण, विक्री, प्रशासन">
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="whyInterested">या पदासाठी का इच्छुक आहात? *</label>
+                            <textarea id="whyInterested" name="whyInterested" rows="4" required placeholder="कृपया तुमची प्रेरणा व कारणे लिहा..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="availableFrom">कधीपासून उपलब्ध आहात?</label>
+                            <input type="date" id="availableFrom" name="availableFrom">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferredLocation">प्राधान्य स्थान</label>
+                            <select id="preferredLocation" name="preferredLocation">
+                                <option value="">निवडा</option>
+                                <option value="district">जिल्हा स्तर</option>
+                                <option value="taluka">तालुका स्तर</option>
+                                <option value="both">दोन्ही</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">मी सर्व अटी व शर्ती मान्य करतो/करते *</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">
+                            📤 अर्ज सबमिट करा
+                        </button>
+                        <button type="button" class="btn btn-secondary" onclick="hideApplicationForm()">
+                            ❌ रद्द करा
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="action-buttons" id="mainButtons">
+            <button onclick="showApplicationForm()" class="btn btn-primary pulse">
+                🚀 आता अर्ज करा
+            </button>
+            <a href="mailto:shrimat.org@gmail.com?subject=Co-Ordinator पदासाठी अर्ज&body=आदरणीय महोदय/महोदया,%0A%0Aमी Co-Ordinator पदासाठी अर्ज करू इच्छितो/इच्छिते.%0A%0Aधन्यवाद" class="btn btn-secondary">
+                ✉️ ईमेलद्वारे अर्ज करा
+            </a>
+        </div>
+
+        <div class="footer">
+            <p class="footer-motto">"गुणवत्तापूर्ण शिक्षण व ग्रामीण विकासासाठी कटिबद्ध"</p>
+            <p style="margin-top: 10px; color: #666;">✨ श्रीमत शिक्षण व ग्रामीण विकास संस्था, छत्रपती संभाजीनगर ✨</p>
+        </div>
+    </div>
+    
+    <script>
+        function showApplicationForm() {
+            document.getElementById('applicationForm').style.display = 'block';
+            document.getElementById('mainButtons').style.display = 'none';
+            document.getElementById('applicationForm').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function hideApplicationForm() {
+            document.getElementById('applicationForm').style.display = 'none';
+            document.getElementById('mainButtons').style.display = 'flex';
+        }
+        
+        // Handle form submission
+        document.getElementById('jobApplicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const applicationData = {};
+            
+            for (let [key, value] of formData.entries()) {
+                applicationData[key] = value;
+            }
+            
+            // Add timestamp
+            applicationData.submittedAt = new Date().toLocaleString('mr-IN');
+            
+            console.log('Application Data:', applicationData);
+            
+            // Show success message
+            showSuccessMessage();
+            
+            // Here you can integrate with your database
+            // submitToDatabase(applicationData);
+        });
+        
+        function showSuccessMessage() {
+            const form = document.getElementById('jobApplicationForm');
+            form.innerHTML = `
+                <div class="success-message" style="display: block;">
+                    <h3>🎉 धन्यवाद!</h3>
+                    <p>तुमचा अर्ज यशस्वीरित्या सबमिट झाला आहे.</p>
+                    <p>आम्ही लवकरच तुमच्याशी संपर्क साधू.</p>
+                    <button onclick="location.reload()" class="btn btn-primary" style="margin-top: 15px;">
+                        🔄 नवीन अर्ज करा
+                    </button>
+                </div>
+            `;
+        }
+        
+        // Optional: Save to localStorage for backup
+        function saveToLocalStorage(data) {
+            let applications = JSON.parse(localStorage.getItem('applications') || '[]');
+            applications.push(data);
+            localStorage.setItem('applications', JSON.stringify(applications));
+        }
+      
+      <!-- Supabase JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    // Replace with your Supabase details
+    const supabaseUrl = "https://rchlyxobzmretxxbpygy.supabase.co";
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJjaGx5eG9iem1yZXR4eGJweWd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg3OTE2NzUsImV4cCI6MjA3NDM2NzY3NX0.mm9SGApGKsi60tMlo4ZsOOlCDuYIr9Rmoe7nMqrX53E";
+    const supabase = Supabase.createClient(supabaseUrl, supabaseKey);
+
+    async function submitForm(event) {
+      event.preventDefault(); // Prevent page reload
+
+      const formData = {
+        fullName: document.getElementById("fullName").value,
+        email: document.getElementById("email").value,
+        mobile: document.getElementById("mobile").value,
+        age: document.getElementById("age").value,
+        address: document.getElementById("address").value,
+        education: document.getElementById("education").value,
+        educationField: document.getElementById("educationField").value,
+        experience: document.getElementById("experience").value,
+        previousWork: document.getElementById("previousWork").value,
+        whyInterested: document.getElementById("whyInterested").value,
+        availableFrom: document.getElementById("availableFrom").value,
+        preferredLocation: document.getElementById("preferredLocation").value,
+      };
+
+      const { data, error } = await supabase
+        .from("job_applications")
+        .insert([formData]);
+
+      if (error) {
+        alert("Error: " + error.message);
+      } else {
+        alert("Form submitted successfully!");
+        document.getElementById("jobForm").reset();
+      }
+    }
+
+    </script>
+</body>
+</html>
