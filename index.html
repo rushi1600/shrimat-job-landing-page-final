@@ -390,6 +390,7 @@
         </div>
 
         <!-- Application Form -->
+        <form id="jobForm" onsubmit="submitForm(event)">
         <div class="application-form" id="applicationForm" style="display: none;">
             <div class="content-card" style="max-width: 800px; margin: 0 auto;">
                 <h2 class="card-title">
@@ -494,15 +495,16 @@
                 </form>
             </div>
         </div>
-
-        <div class="action-buttons" id="mainButtons">
-            <button onclick="showApplicationForm()" class="btn btn-primary pulse">
-                🚀 आता अर्ज करा
-            </button>
-            <a href="mailto:shrimat.org@gmail.com?subject=Co-Ordinator पदासाठी अर्ज&body=आदरणीय महोदय/महोदया,%0A%0Aमी Co-Ordinator पदासाठी अर्ज करू इच्छितो/इच्छिते.%0A%0Aधन्यवाद" class="btn btn-secondary">
-                ✉️ ईमेलद्वारे अर्ज करा
-            </a>
-        </div>
+            
+   <div class="action-buttons" id="mainButtons">
+      <button type="submit" class="btn btn-primary pulse">
+          🚀 आता अर्ज करा
+      </button>
+      <a href="mailto:shrimat.org@gmail.com?subject=Co-Ordinator पदासाठी अर्ज&body=आदरणीय महोदय/महोदया,%0A%0Aमी Co-Ordinator पदासाठी अर्ज करू इच्छितो/इच्छिते.%0A%0Aधन्यवाद" class="btn btn-secondary">
+          ✉️ ईमेलद्वारे अर्ज करा
+      </a>
+   </div>
+</form>
 
         <div class="footer">
             <p class="footer-motto">"गुणवत्तापूर्ण शिक्षण व ग्रामीण विकासासाठी कटिबद्ध"</p>
