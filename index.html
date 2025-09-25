@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="mr">
 <head>
     <meta charset="UTF-8">
@@ -199,85 +199,7 @@
             100% { transform: scale(1); }
         }
         
-        .application-form {
-            margin: 40px 0;
-        }
-        
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .form-group.full-width {
-            grid-column: 1 / -1;
-        }
-        
-        .form-group label {
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #374151;
-            font-size: 1rem;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 12px;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-            font-family: inherit;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #8b5cf6;
-            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-        
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .checkbox-group input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            margin: 0;
-        }
-        
-        .form-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        
-        .success-message {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 20px 0;
-            display: none;
-        }
+
         
         @media (max-width: 768px) {
             .content-grid {
@@ -390,116 +312,10 @@
             </div>
         </div>
 
-        <!-- Application Form -->
-        <div class="application-form" id="applicationForm" style="display: none;">
-            <div class="content-card" style="max-width: 800px; margin: 0 auto;">
-                <h2 class="card-title">
-                    <span class="card-icon">📝</span>
-                    अर्ज फॉर्म - Co-Ordinator पद
-                </h2>
-                <form id="jobApplicationForm">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="fullName">संपूर्ण नाव *</label>
-                            <input type="text" id="fullName" name="fullName" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">ई-मेल *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="mobile">मोबाइल नंबर *</label>
-                            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="age">वय</label>
-                            <input type="number" id="age" name="age" min="18" max="65">
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="address">पत्ता *</label>
-                            <textarea id="address" name="address" rows="3" required></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="education">शैक्षणिक पात्रता *</label>
-                            <select id="education" name="education" required>
-                                <option value="">निवडा</option>
-                                <option value="graduate">(Graduate</option>
-                                <option value="postgraduate">Post Graduate</option>
-                                <option value="diploma">Diploma</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="educationField">शिक्षणाचे क्षेत्र</label>
-                            <input type="text" id="educationField" name="educationField" placeholder="उदा: कॉमर्स, आर्ट्स, सायन्स">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="experience">अनुभव (वर्षांत)</label>
-                            <select id="experience" name="experience">
-                                <option value="">निवडा</option>
-                                <option value="fresher">0 वर्षे</option>
-                                <option value="1-2">1-2 वर्षे</option>
-                                <option value="3-5">3-5 वर्षे</option>
-                                <option value="5+">5+ वर्षे</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="previousWork"> अनुभव असल्यास काम केलेल्या संस्थेच्या नावासह कामाचे विवरण</label>
-                            <input type="text" id="previousWork" name="previousWork" placeholder="उदा: शिक्षण, विक्री, प्रशासन">
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="whyInterested">या पदासाठी का इच्छुक आहात? *</label>
-                            <textarea id="whyInterested" name="whyInterested" rows="4" required placeholder="कृपया तुमची प्रेरणा व कारणे लिहा..."></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="availableFrom">कधीपासून उपलब्ध आहात?</label>
-                            <input type="date" id="availableFrom" name="availableFrom">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="preferredLocation">प्राधान्य स्थान</label>
-                            <select id="preferredLocation" name="preferredLocation">
-                                <option value="">निवडा</option>
-                                <option value="district">जिल्हा स्तर</option>
-                                <option value="taluka">तालुका स्तर</option>
-                                <option value="both">दोन्ही</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="terms" name="terms" required>
-                                <label for="terms">मी सर्व अटी व शर्ती मान्य करतो/करते *</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-buttons">
-                        <button type="submit" class="btn btn-primary">
-                            📤 अर्ज सबमिट करा
-                        </button>
-                        <button type="button" class="btn btn-secondary" onclick="hideApplicationForm()">
-                            ❌ रद्द करा
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
         <div class="action-buttons" id="mainButtons">
-            <button type="button" class="btn btn-primary pulse" onclick="showApplicationForm()">
+            <a href="https://forms.gle/3JaDAHQdXFNYygmZ6" target="_blank" class="btn btn-primary pulse">
                 🚀 आता अर्ज करा
-            </button>
+            </a>
             <a href="mailto:shrimat.org@gmail.com?subject=Co-Ordinator पदासाठी अर्ज&body=आदरणीय महोदय/महोदया,%0A%0Aमी Co-Ordinator पदासाठी अर्ज करू इच्छितो/इच्छिते.%0A%0Aधन्यवाद" class="btn btn-secondary">
                 ✉️ ईमेलद्वारे अर्ज करा
             </a>
@@ -511,62 +327,6 @@
         </div>
     </div>
     
-    <script>
-        function showApplicationForm() {
-            document.getElementById('applicationForm').style.display = 'block';
-            document.getElementById('mainButtons').style.display = 'none';
-            document.getElementById('applicationForm').scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        function hideApplicationForm() {
-            document.getElementById('applicationForm').style.display = 'none';
-            document.getElementById('mainButtons').style.display = 'flex';
-        }
-        
-        // Handle form submission
-        document.getElementById('jobApplicationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const applicationData = {};
-            
-            for (let [key, value] of formData.entries()) {
-                applicationData[key] = value;
-            }
-            
-            // Add timestamp
-            applicationData.submittedAt = new Date().toLocaleString('mr-IN');
-            
-            console.log('Application Data:', applicationData);
-            
-            // Show success message
-            showSuccessMessage();
-            
-            // Here you can integrate with your database
-            // submitToDatabase(applicationData);
-        });
-        
-        function showSuccessMessage() {
-            const form = document.getElementById('jobApplicationForm');
-            form.innerHTML = `
-                <div class="success-message" style="display: block;">
-                    <h3>🎉 धन्यवाद!</h3>
-                    <p>तुमचा अर्ज यशस्वीरित्या सबमिट झाला आहे.</p>
-                    <p>आम्ही लवकरच तुमच्याशी संपर्क साधू.</p>
-                    <button onclick="location.reload()" class="btn btn-primary" style="margin-top: 15px;">
-                        🔄 नवीन अर्ज करा
-                    </button>
-                </div>
-            `;
-        }
-        
-        // Optional: Save to localStorage for backup
-        function saveToLocalStorage(data) {
-            let applications = JSON.parse(localStorage.getItem('applications') || '[]');
-            applications.push(data);
-            localStorage.setItem('applications', JSON.stringify(applications));
-        }
-    </script>
+
 </body>
 </html>
